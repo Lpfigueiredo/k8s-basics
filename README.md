@@ -2,4 +2,3 @@
 
 docker build -t k8s-basics-image ./1-image
 minikube start
-kubectl create namespace myapp

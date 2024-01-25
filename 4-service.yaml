@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: myapp
+  namespace: myapp
 spec:
   type: NodePort
   selector:
