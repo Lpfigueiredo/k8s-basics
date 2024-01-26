@@ -15,7 +15,20 @@ spec:
       containers:
       - name: myapp
         image: k8s-basics-image
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
+        env:
+          - name: TEST
+            value: Flagship
+          # - name: TEST
+          #   valueFrom:
+          #     configMapKeyRef:
+          #       name: myapp
+          #       key: key
+          # - name: TEST
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: mysecret
+          #       key: password
         resources:
           limits:
             memory: "128Mi"

@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: myjob
+  namespace: myapp
 spec:
   schedule: "* * * * *"
   jobTemplate:
