@@ -20,5 +20,14 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
         ports:
-        - containerPort: 3000
+        - name: http
+          containerPort: 3000
